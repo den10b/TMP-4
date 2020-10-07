@@ -1,12 +1,19 @@
-﻿using System;
-
-namespace prakt42
+﻿using System.Collections;
+using System;
+class Program
 {
-  class Program
+  static void Main(string[] args)
   {
-    static void Main(string[] args)
+    Queue queue = new Queue();
+
+    queue.Enqueue("First");
+    queue.Enqueue("Second");
+    queue.Enqueue("Third");
+    queue.Enqueue("Fourth");
+  while (queue.Count > 0)
     {
-      Console.WriteLine("Hello World!");
+      object obj = queue.Dequeue();
+      Console.WriteLine("From Queue: {0}", obj);
     }
   }
 }
